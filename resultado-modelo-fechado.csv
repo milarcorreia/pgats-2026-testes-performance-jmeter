@@ -1,0 +1,5 @@
+Rótulo,# Amostras,Média,Mediana,90% Line,95% Line,99% Line,Mín.,Máx.,% de Erro,Vazão,KB/s,Sent KB/sec
+POST /login - Autenticar (tiago),3,77,78,82,82,82,71,82,"0,000%","1,44300","0,58","0,34"
+POST /pets - Cadastrar pet unico,9,4,5,6,7,7,3,7,"0,000%","3,67347","1,17","1,63"
+GET /pets - Listar pets,9,5,5,6,7,7,4,7,"0,000%","3,58852","37,70","1,29"
+TOTAL,21,15,5,71,78,82,3,82,"0,000%","7,45739","35,02","2,82"

@@ -1,0 +1,16 @@
+# Copie este arquivo para local.properties e preencha LOCALMENTE.
+# NUNCA publique local.properties no GitHub.
+loginUser=SEU_USUARIO_DE_TESTE
+loginPassword=SUA_SENHA_DE_TESTE
+
+# Configuracoes opcionais
+host=localhost
+port=3000
+protocol=http
+closedUsers=3
+closedRamp=3
+closedLoops=3
+openRate=1
+openSeconds=20
+openDrain=10
+tokenJsonPath=$.token

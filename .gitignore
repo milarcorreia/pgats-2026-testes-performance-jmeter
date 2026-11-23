@@ -1,0 +1,18 @@
+# Dados locais e credenciais
+local.properties
+*.env
+.env*
+!.env.example
+
+# Logs e possiveis respostas/tokens de execucao
+*.jtl
+*.log
+logs/
+results/
+relatorio-html/
+report-html/
+executions/
+
+# Temporarios
+.DS_Store
+Thumbs.db
