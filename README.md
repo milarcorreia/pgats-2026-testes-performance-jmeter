@@ -20,13 +20,13 @@ Trabalho extra de Testes de Performance. Este repositório contém um plano de t
 & "C:\CAMINHO\apache-jmeter-5.6.3\bin\jmeter.bat" -q "C:\CAMINHO\pgats-jmeter-publicacao-segura\local.properties"
 ```
 
-5. No JMeter, abra `pgats-performance-pets.jmx`. Para analisar os cenários separadamente, desabilite um Thread Group de cada vez. Adicione **Relatório Agregado** / **Ver Árvore de Resultados** para validar e observar as respostas.
+5. No JMeter, abra `pgats-performance-pets.jmx`. **Por padrão, os dois Thread Groups estão habilitados**. Para analisar os cenários separadamente, desabilite um Thread Group antes de executar o outro; limpe os resultados entre as execuções. Adicione **Relatório Agregado** / **Ver Árvore de Resultados** para validar e observar as respostas.
 
 > **Atenção:** este `.jmx` público é intencionalmente **sem credenciais embutidas**. Se abrir o arquivo sem configurar as propriedades de login, a autenticação falhará. O token JWT é capturado apenas durante a execução e não fica fixado no plano.
 
 ## Resultados obtidos na execução local (23/11/2026)
 
-Dados registrados nas telas do Relatório Agregado durante os testes com a API em `localhost`. São medições locais, não um benchmark de produção.
+Dados registrados nos arquivos `resultado-modelo-fechado.csv` e `resultado-modelo-aberto.csv` durante os testes com a API em `localhost`. São medições locais, não um benchmark de produção.
 
 | Métrica | Modelo fechado | Modelo aberto |
 |---|---:|---:|
@@ -34,8 +34,8 @@ Dados registrados nas telas do Relatório Agregado durante os testes com a API e
 | Requisições de login | 3 | 20 |
 | Requisições POST /pets | 9 | 20 |
 | Requisições GET /pets | 9 | 20 |
-| Média geral | 15 ms | 33 ms |
-| Percentil 95 geral | 78 ms | 73 ms |
+| Média geral | 15 ms | 29 ms |
+| Percentil 95 geral | 78 ms | 76 ms |
 | Vazão total | 7,5 req/s | 3,9 req/s |
 | Taxa de erros | 0,00% | 0,00% |
 
@@ -45,4 +45,4 @@ As duas cargas possuem características diferentes; os valores não indicam que 
 
 - Não publicar `local.properties`, senhas, cookies de sessão, tokens JWT ou respostas completas de login.
 - Não publicar arquivos `.jtl` ou logs sem revisão, pois podem conter cabeçalhos/dados de requisição.
-- Para entrega, publique o `.jmx`, este `README.md`, `local.properties.example` e `.gitignore`.
+- Para entrega, publique o `.jmx`, este `README.md`, `local.properties.example` e `.gitignore`. Os CSVs de resultados são evidências complementares e não contêm tokens de autenticação.
